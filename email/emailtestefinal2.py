@@ -11,9 +11,12 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 
-# 1. CONFIGURAÇÃO DE CAMINHOS - MUDAR O ARQUIVO PARA ENVIO DA LISTA 2. 
+# 1. CONFIGURAÇÃO DE CAMINHOS
 nome_usuario = os.getlogin()
-caminho_arquivo = r"C:\Users\William Estevam\Desktop\Codigos\LISTA DE CLIENTE 1 - NEWPEN.xlsx"
+# Pega o caminho da pasta onde o script está rodando
+diretorio_atual = os.path.dirname(os.path.abspath(__file__))
+# Define o caminho da planilha dentro dessa mesma pasta
+caminho_arquivo = os.path.join(diretorio_atual, "LISTA DE CLIENTE 2 - NEWPEN.xlsx")
 perfil_robo = rf'C:\Users\{nome_usuario}\AppData\Local\Google\Chrome\User Data\Automacao'
 
 # 2. CARREGAR PLANILHA E TRATAR COLUNAS
