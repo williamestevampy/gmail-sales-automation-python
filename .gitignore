@@ -1,0 +1,11 @@
+# Ignorar planilhas de clientes
+*.xlsx
+*.xls
+*.csv
+
+# Ignorar pastas de sistema e logs
+__pycache__/
+*.log
+
+# Se você criou a pasta de perfil dentro do projeto, ignore-a:
+Automacao/
